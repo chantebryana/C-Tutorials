@@ -1,15 +1,21 @@
-//my third program in C++: I figured it out wihtout being explicitly told!
+//playing with strings and compound types (before I was using fundamental types)
+/*this time () didn't work for defining mystring.  Here's what my console told me: 
+Chauncy@DESKTOP-L5V77C9 ~/home/projects/C++ Tutorials
+$ g++ cppEducation.cpp -o cppEducation
+cppEducation.cpp: In function ‘int main()’:
+cppEducation.cpp:11:48: error: no match for call to ‘(std::string {aka std::basic_string<char>}) (const char [35])’
+  mystring ("This is a different string content");
+*/
 #include <iostream>
+#include <string>
+using namespace std;
 
 int main ()
 {
-	int a = 5;
-	int b = 2;
-	a = a + 1;
-	int result = a - b;
-	std::cout << a;
-	std::cout << result;
-	//std::cout << "Hello World! ";
-	//std::cout << "I'm a C++ program";
-	//std::cout << " with more words!!";
+	string mystring;
+	mystring = "This is the initial string content";
+	cout << mystring << endl;
+	mystring = "This is a different string content";
+	cout << mystring << endl;
+	return 0;
 }
