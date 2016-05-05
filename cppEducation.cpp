@@ -2,17 +2,21 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
 using namespace std;
 
 int main ()
 {
 	string mystr;
-	string secondstr;
-	cout << "What's your name? ";
+	float price = 0;
+	int quantity = 0;
+	
+	cout << "Enter price: ";
 	getline (cin, mystr);
-	cout << "Hello " << mystr << ".\n";
-	cout << "What's your favorite team? ";
-	getline (cin, secondstr);
-	cout << mystr << ", I like " << secondstr << " too!\n";
+	stringstream(mystr) >> price;
+	cout << "Enter quantity ";
+	getline (cin, mystr);
+	stringstream(mystr) >> quantity;
+	cout << "Total price: " << price*quantity << endl;
 	return 0;
 }
