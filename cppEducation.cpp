@@ -1,15 +1,18 @@
 //exploring i/o concepts in http://www.cplusplus.com/doc/tutorial/basic_io/ 
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main ()
 {
-	int i;
-	int j;
-	cout << "Please enter two integer values: ";
-	cin >> i >> j;
-	cout << "The value you entered is " << i << " and " << j;
-	//cout << " and its double is " << i*2 << ".\n";
+	string mystr;
+	string secondstr;
+	cout << "What's your name? ";
+	getline (cin, mystr);
+	cout << "Hello " << mystr << ".\n";
+	cout << "What's your favorite team? ";
+	getline (cin, secondstr);
+	cout << mystr << ", I like " << secondstr << " too!\n";
 	return 0;
 }
